@@ -5,7 +5,7 @@ const Navigation = () => {
     <div>
       <div className='container mx-auto flex gap-5 font-semibold text-[#ffffff]'>
         <Link href="/">work</Link>
-        <Link href="/mastering-react">back to list</Link>
+        {/* <Link href="/mastering">back to list</Link> */}
         <hr />
       </div>
     </div>
