@@ -1,12 +1,23 @@
-import BaseLayout from '../components/BaseLayout';
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import Link from 'next/link'
+import Image from 'next/image'
 
-const masteringTypescript = ({ posts }) => {
+interface masteringTypescriptProps {
+  posts: {
+    frontMatter: {
+      title: string;
+      date: string;
+    };
+    slug: string;
+  }[];
+}
+
+
+const masteringTypescript: React.FC<masteringTypescriptProps> = ({ posts }) => {
   return (
-    <BaseLayout>
+    <div>
     <div className='px-[20rem]'>
       {posts.map((post, index) => (
         <Link href={'/writing/' + post.slug} passHref key={index}>
@@ -14,7 +25,7 @@ const masteringTypescript = ({ posts }) => {
 
             <div className="flex flex-col md:flex-row items-center">
               <div className="w-16 h-16 md:w-24 md:h-24 rounded-full overflow-hidden">
-                <img src="/react.png" className="w-full h-full object-cover" />
+              <Image src="/react.png" className="w-full h-full object-cover" alt={'reactLogo'} width={100} height={100} />
               </div>
               <div className="flex flex-col ml-4">
                 <h3 className="text-lg font-semibold text-white">{post.frontMatter.title}</h3>
@@ -31,7 +42,7 @@ const masteringTypescript = ({ posts }) => {
         </Link>
       ))}
       </div>
-    </BaseLayout>
+    </div>
   );
 }
 

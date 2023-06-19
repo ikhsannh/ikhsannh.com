@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import Link from 'next/link'
 import IconPDF from './IconPDF'
@@ -11,14 +13,14 @@ const items = [
     feedback: '"Hello Ikhsan! Thanks for your contribution. It`s a pleasure to work with you."',
     client: 'Development Team',
     clientTitle: 'IT Center Telkom University',
-    url: 'https://igracias.telkomuniversity.ac.id/?ref=IkhsanNHuda',
+    url: 'https://igracias.telkomuniversity.ac.id/',
   },
   {
     title: 'Trigan.org',
     feedback: '"Ikhsan is a talented frontend developer with a great grasp of React. I would be happy to work with him again!"',
     client: 'Aaron S.',
     clientTitle: 'Founder & CEO Trigan',
-    url: 'https://trigan.org/?ref=IkhsanNHuda',
+    url: 'https://trigan.org/',
   },
 ];
 
@@ -45,7 +47,7 @@ const LeftComponent = () => {
          <div>    
           <div className='flex flex-col gap-1'> 
         
-          <h1 className='text-8xl font-lato italic text-[#bababa] '>Ikhsan.</h1>             
+        <h1 className='text-8xl font-lato italic text-[#bababa] '>Ikhsan.</h1>             
          <div className='flex gap-2 text-[#bababa]'> 
           <h2 className='text-1xl font-catamaran text-[#bababa] '>
             A Happy React User

@@ -4,7 +4,7 @@ const IconGithub = () => {
     return (
        <Link
             target='_blank' 
-            href='https://github.com/ikhsannh'    
+            href='https://github.com/ikhsannh/'    
             > 
         <svg
         width="20"

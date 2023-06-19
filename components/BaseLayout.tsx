@@ -1,8 +1,9 @@
 // import Navigation from "./Navigation";
 import Head from "next/head";
+import { ReactNode } from "react";
 
-const BaseLayout = (props) => {
-  return (
+export default function BaseLayout({ children }: { children: ReactNode }) {
+return (
     <div>
        <Head>
         <title>Ikhsan N. Huda — Dev.</title>
@@ -14,10 +15,9 @@ const BaseLayout = (props) => {
       </Head>
     <div className="container mx-auto">
       {/* <Navigation /> */}
-      {props.children}
+      {children}
     </div>
     </div>
   )
 }
 
-export default BaseLayout;

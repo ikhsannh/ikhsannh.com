@@ -18,4 +18,3 @@ const IconTwo = () => {
   }
   
   export default IconTwo;
-  

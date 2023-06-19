@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic'
 
 const IconPDF = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const PDFViewer = dynamic(() => import("../components/PDFViewer"), {ssr: false})
+  const PDFViewer = dynamic(() => import('../components/PDFViewer'), { ssr: false })
 
   function closeModal() {setIsOpen(false)}
   function openModal() {setIsOpen(true)}

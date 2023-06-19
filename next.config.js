@@ -1,7 +1,13 @@
-const isProd = process.env.NODE_ENV === 'production'
+const withPWA = require('next-pwa')({
+  dest: '/',
+  register: true,
+  skipWaiting: true,
+  disable: process.env.NODE_ENV === 'development' // Disable PWA in development
+});
 
-module.exports = {
-  // Following line is to let NextJS know about its domain on specific case:
+
+module.exports = withPWA({
+    // Following line is to let NextJS know about its domain on specific case:
   // 1. Project page : assetPrefix should be your project name (production only)
   // 2. User or Group page : assetPrefix should not be set, or just '/' (production only)
   // assetPrefix: isProd ? '/' : '',
@@ -31,3 +37,4 @@ module.exports = {
     return config;
   }
 }
+);

@@ -10,6 +10,10 @@ module.exports = {
     ],
     theme: {
       extend: {
+        colors: {
+          darkGreen: "#08161A",
+          cream : "#F5F5F5",
+      },
         fontFamily: {
           Catamaran: ['Catamaran', 'sans-serif'],
           Lato: ['Lato', 'sans-serif'],
@@ -28,3 +32,4 @@ module.exports = {
     },
     plugins: [],
   }
+

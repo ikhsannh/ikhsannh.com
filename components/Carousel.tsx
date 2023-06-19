@@ -1,7 +1,18 @@
 import { useState } from 'react';
 import CarouselCard from './CarouselCard';
 
-const Carousel = ({ items }) => {
+interface CarouselProps {
+    items: {
+        title: string;
+        feedback: string;
+        client: string;
+        clientTitle: string;
+        url: string;
+    }[];
+}
+
+
+const Carousel: React.FC<CarouselProps> = ({ items }) => {
   const [currentItem, setCurrentItem] = useState(0);
 
   const prevItem = () => {
@@ -16,7 +27,7 @@ const Carousel = ({ items }) => {
 
   return (
 
-    <div className="flex items-center text-center sm:fixed mt-10 sm:mt-[35rem]">
+    <div className="flex items-center text-center sm:fixed mt-14 sm:mt-[35rem] ml-3 sm:ml-0">
 
 
       <button onClick={prevItem} className="bg-gray-200 rounded-full p-1 ml-[0.5rem] mr-1">
