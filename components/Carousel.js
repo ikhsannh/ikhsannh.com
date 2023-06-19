@@ -19,7 +19,7 @@ const Carousel = ({ items }) => {
     <div className="flex items-center text-center sm:fixed mt-10 sm:mt-[35rem]">
 
 
-      <button onClick={prevItem} className="bg-gray-200 rounded-full p-1 ml-[1rem] mr-1">
+      <button onClick={prevItem} className="bg-gray-200 rounded-full p-1 ml-[0.5rem] mr-1">
         <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
         </svg>
@@ -39,7 +39,7 @@ const Carousel = ({ items }) => {
       </div>
       {/* End Card */}
 
-      <button onClick={nextItem} className="bg-gray-200 absolute rounded-full p-1 ml-[23.5rem] sm:ml-[30rem]">
+      <button onClick={nextItem} className="bg-gray-200 absolute rounded-full p-1 ml-[21.5rem] sm:ml-[30rem]">
         <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>

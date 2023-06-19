@@ -7,7 +7,7 @@ import workerSrc from '../pdf-worker'
 pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
 
 export default function PDFViewer() {
-  const [file, setFile] = useState('./resumei.pdf');
+  const [file, setFile] = useState('./resume.pdf');
   //console.log(file);
   const [numPages, setNumPages] = useState(null);
 

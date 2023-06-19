@@ -15,7 +15,7 @@ const items = [
   },
   {
     title: 'Trigan.org',
-    feedback: '"Ikhsan is a talented software developer with a great grasp of React. I would be happy to work with him again!"',
+    feedback: '"Ikhsan is a talented frontend developer with a great grasp of React. I would be happy to work with him again!"',
     client: 'Aaron S.',
     clientTitle: 'Founder & CEO Trigan',
     url: 'https://trigan.org/?ref=IkhsanNHuda',
@@ -46,7 +46,7 @@ const LeftComponent = () => {
           <div className='flex flex-col gap-1'> 
         
           <h1 className='text-8xl font-lato italic text-[#bababa] '>Ikhsan.</h1>             
-         <div className='flex gap-2 text-[#bababa] items-center'> 
+         <div className='flex gap-2 text-[#bababa]'> 
           <h2 className='text-1xl font-catamaran text-[#bababa] '>
             A Happy React User
           </h2>

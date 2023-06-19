@@ -4,8 +4,8 @@ const RightComponent = () => {
     return (
         <div className='justify-center items-center'>
 
-            <div className='pt-[4rem] ml-[1.5rem] sm:pl-[20rem] lg:pl-[30rem] xl:pl-[60rem]'>
-                <div className='bg-white w-[23rem] lg:w-[40rem] h-[21.5rem] sm:h-[18.2rem] rounded-md mb-20'>
+            <div className='pt-[4rem] pl-[0.8rem] sm:pl-[20rem] lg:pl-[30rem] xl:pl-[60rem]'>
+                <div className='bg-white w-[22rem] lg:w-[40rem] h-[21.5rem] sm:h-[18.2rem] rounded-md mb-20'>
                     <hr className='w-[10rem] h-[0.5rem] bg-[#bababa]' />
                     <div className="">
                         <img className="px-2 h-[8.5rem] w-[40rem]" src="/ticketing.png" alt="ticket" />
@@ -47,7 +47,7 @@ const RightComponent = () => {
                     </div>
                 </div>
 
-                <div className='bg-white w-[23rem] lg:w-[40rem] h-[22.5rem] sm:h-[19.5rem] rounded-sm mb-20'>
+                <div className='bg-white w-[22rem] lg:w-[40rem] h-[22.5rem] sm:h-[19.5rem] rounded-sm mb-20'>
                     <hr className='w-[10rem] h-[0.5rem] bg-[#bababa] float-right' />
                     <div className="">
                         <img className="px-2 h-[8.5rem] w-[40rem]" src="/pl.png" alt="Sunset in the mountains" />
