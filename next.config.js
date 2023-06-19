@@ -15,8 +15,10 @@ module.exports = withPWA({
   // experimental: {
   //   forceSwcTransforms: true,
   // },
+  
   images: {
     formats: ['image/avif', 'image/webp'],
+    unoptimized: true,
   },
   webpack: (config) => {
     // load worker files as a component `file-loader`
