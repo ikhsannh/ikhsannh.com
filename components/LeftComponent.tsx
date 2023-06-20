@@ -2,10 +2,10 @@
 
 import React from 'react'
 import Link from 'next/link'
-import IconPDF from './IconPDF'
-import IconMeet from './IconMeet'
+import IconPDF from './Icon/IconPDF'
+import IconMeet from './Icon/IconMeet'
 import Carousel from './Carousel'
-import IconGithub from './IconGithub'
+import IconGithub from './Icon/IconGithub'
 
 const items = [
   {
