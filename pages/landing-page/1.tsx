@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Navbar from "@/components/0/Navbar";
-import Footer from "@/components/0/Footer";
+import Navbar from "@/components/LandingPage/0/Navbar";
+import Footer from "@/components/LandingPage/0/Footer";
 import { motion } from "framer-motion";
 import { introLeftAnimation, introRightAnimation, videoAnimation, textAnimation } from "@/utils/0/animations";
 
