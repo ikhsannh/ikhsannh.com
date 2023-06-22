@@ -16,12 +16,12 @@ interface masteringNextjsProps {
 
 const MasteringNextjs: React.FC<masteringNextjsProps> = ({ posts }) => {
   return (
-    <div className='px-[20rem]'>
+    <div className='container mx-auto xl:px-[2rem] md:px-[0rem] sm:px-[1rem] px-[1rem]'>
     {posts.map((post, index) => (
       <Link href={'/writing/nextjs/' + post.slug} passHref key={index}>
-        <div className="flex flex-col md:flex-row items-center justify-between p-4 border-b-2 border-gray-200">
+        <div className="flex flex-row items-center justify-between p-4 border-b-2 border-gray-200">
 
-          <div className="flex flex-col md:flex-row items-center">
+          <div className="flex flex-row items-center">
             <div className="w-16 h-16 md:w-24 md:h-24 rounded-full overflow-hidden">
               <Image src="/react.png" className="w-full h-full object-cover" alt={'reactLogo'} width={100} height={100} />
             </div>
@@ -30,7 +30,7 @@ const MasteringNextjs: React.FC<masteringNextjsProps> = ({ posts }) => {
               <p className="text-gray-500">{post.frontMatter.date}</p>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row items-center mt-4 md:mt-0">
+          <div className="flex flex-row items-center mt-4 md:mt-0">
             <p className="text-gray-300">Read more</p>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" color='white'>
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
