@@ -18,7 +18,7 @@ const MasteringNextjs: React.FC<masteringNextjsProps> = ({ posts }) => {
   return (
     <div className='px-[20rem]'>
     {posts.map((post, index) => (
-      <Link href={'/writing/' + post.slug} passHref key={index}>
+      <Link href={'/writing/nextjs/' + post.slug} passHref key={index}>
         <div className="flex flex-col md:flex-row items-center justify-between p-4 border-b-2 border-gray-200">
 
           <div className="flex flex-col md:flex-row items-center">
@@ -44,10 +44,10 @@ const MasteringNextjs: React.FC<masteringNextjsProps> = ({ posts }) => {
 }
 
 export const getStaticProps = async () => {
-  const files = fs.readdirSync(path.join('posts'))
+  const files = fs.readdirSync(path.join('posts/nextjs')) // change here if you want to change the folder name / directory 
 
   const posts = files.map(filename => {
-    const markdownWithMeta = fs.readFileSync(path.join('posts', filename), 'utf-8')
+    const markdownWithMeta = fs.readFileSync(path.join('posts/nextjs', filename), 'utf-8')
     const { data: frontMatter } = matter(markdownWithMeta)
 
     return {

@@ -20,7 +20,7 @@ const masteringTypescript: React.FC<masteringTypescriptProps> = ({ posts }) => {
     <div>
     <div className='px-[20rem]'>
       {posts.map((post, index) => (
-        <Link href={'/writing/' + post.slug} passHref key={index}>
+        <Link href={'/writing/typescript/' + post.slug} passHref key={index}>
           <div className="flex flex-col md:flex-row items-center justify-between p-4 border-b-2 border-gray-200">
 
             <div className="flex flex-col md:flex-row items-center">
@@ -47,10 +47,10 @@ const masteringTypescript: React.FC<masteringTypescriptProps> = ({ posts }) => {
 }
 
 export const getStaticProps = async () => {
-  const files = fs.readdirSync(path.join('posts'))
+  const files = fs.readdirSync(path.join('posts/tsc'))
 
   const posts = files.map(filename => {
-    const markdownWithMeta = fs.readFileSync(path.join('posts', filename), 'utf-8')
+    const markdownWithMeta = fs.readFileSync(path.join('posts/tsc', filename), 'utf-8')
     const { data: frontMatter } = matter(markdownWithMeta)
 
     return {
