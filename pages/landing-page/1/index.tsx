@@ -8,7 +8,7 @@ import { introLeftAnimation, introRightAnimation, videoAnimation, textAnimation 
 const One: NextPage = () => {
   return (
     <motion.div className="min-h-screen px-4 md:px-8 lg:px-16 bg-darkGreen text-cream" initial="initial" animate="animate">
-      <Head> <title>Home || Team RE</title> </Head>
+      <Head> <title>Home | Team RE</title> </Head>
 
       <Navbar />
 
