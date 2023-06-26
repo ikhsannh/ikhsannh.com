@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import Image from 'next/image';
+// import Image from 'next/image';
 import Navigation from '@/components/Navigation';
 import Button from '@/components/Button';
 
@@ -26,9 +26,9 @@ const PostPage: React.FC<PostPageProps> = ({ frontMatter: { title, date }, mdxSo
       <Navigation />
       <div className="flex flex-col md:flex-row items-center justify-between p-4 border-b-2 border-gray-200 border-opacity-60">
         <div className="flex flex-col md:flex-row items-center mx-auto">
-          <div className="w-16 h-16 md:w-24 md:h-24 rounded-full overflow-hidden">
+          {/* <div className="w-16 h-16 md:w-24 md:h-24 rounded-full overflow-hidden">
           <Image src="/react.png" className="w-full h-full object-cover" alt={'reactLogo'} width={100} height={100} />
-          </div>
+          </div> */}
           <div className="flex flex-col ml-4">
             <h3 className="text-lg font-semibold text-white leading-3">{title}</h3>
             <p className="text-gray-400 text-center sm:text-left text-sm">{date}</p>

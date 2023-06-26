@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import matter, { GrayMatterFile } from 'gray-matter'
 import Link from 'next/link'
-import Image from 'next/image'
+// import Image from 'next/image'
 
 interface masteringNextjsProps {
   posts: {
@@ -22,9 +22,9 @@ const MasteringNextjs: React.FC<masteringNextjsProps> = ({ posts }) => {
         <div className="flex flex-row items-center justify-between p-4 border-b-2 border-gray-200">
 
           <div className="flex flex-row items-center">
-            <div className="w-16 h-16 md:w-24 md:h-24 rounded-full overflow-hidden">
+            {/* <div className="w-16 h-16 md:w-24 md:h-24 rounded-full overflow-hidden">
               <Image src="/react.png" className="w-full h-full object-cover" alt={'reactLogo'} width={100} height={100} />
-            </div>
+            </div> */}
             <div className="flex flex-col ml-4">
               <h3 className="text-lg font-semibold text-white">{post.frontMatter.title}</h3>
               <p className="text-gray-500">{post.frontMatter.date}</p>
