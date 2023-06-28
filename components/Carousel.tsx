@@ -2,15 +2,14 @@ import { useState } from 'react';
 import CarouselCard from './CarouselCard';
 
 interface CarouselProps {
-    items: {
-        title: string;
-        feedback: string;
-        client: string;
-        clientTitle: string;
-        url: string;
-    }[];
+  items: {
+    title: string;
+    feedback: string;
+    client: string;
+    clientTitle: string;
+    url: string;
+  }[];
 }
-
 
 const Carousel: React.FC<CarouselProps> = ({ items }) => {
   const [currentItem, setCurrentItem] = useState(0);
@@ -27,17 +26,15 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 
   return (
 
-    <div className="flex items-center text-center sm:fixed mt-14 sm:mt-[35rem] ml-3 sm:ml-0">
-
-
-      <button onClick={prevItem} className="bg-gray-200 rounded-full p-1 ml-[0.5rem] mr-1">
+    <div className="flex justify-center items-center text-center xl:fixed mt-[2rem] xl:mt-[40rem]">
+      <button onClick={prevItem} className="bg-gray-200 rounded-full p-1 mr-[0.2rem] sm:mr-[1.4rem]">
         <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
         </svg>
       </button>
 
       {/* Start Card */}
-      <div className="flex ml-[0.2rem] sm:ml-[0.5rem] overflow-hidden">
+      <div className="flex overflow-hidden">
         {items.map((item, index) => {
           if (index === currentItem) {
             return (
@@ -50,14 +47,13 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
       </div>
       {/* End Card */}
 
-      <button onClick={nextItem} className="bg-gray-200 absolute rounded-full p-1 ml-[21.5rem] sm:ml-[30rem]">
+      <button onClick={nextItem} className="bg-gray-200 absolute rounded-full p-1 ml-[22.4rem] sm:ml-[29.5rem] xl:ml-[32.5rem]">
         <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
       </button>
-
-
     </div>
+
   );
 };
 

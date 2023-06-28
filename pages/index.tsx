@@ -3,12 +3,12 @@ import RightComponent from "@/components/RightComponent";
 
 export default function Home() {
   return (
-   <main>
-      <div className='flex-col sm:flex justify-around'>
+    <main>
+      <div className='flex-col lg:flex justify-around'>
         <LeftComponent />
-         <br />     
+        <br />
         <RightComponent />
       </div>
-   </main>
+    </main>
   )
 }

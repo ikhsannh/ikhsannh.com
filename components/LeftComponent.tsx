@@ -1,4 +1,3 @@
-"use client"
 
 import React from 'react'
 import Link from 'next/link'
@@ -27,50 +26,59 @@ const items = [
 const LeftComponent = () => {
   return (
     <>
+      {/*===== START =====*/}
       <div className=''>
-        <div 
-          className=' flex 
-                      gap-3 
-                      mr-[4rem] 
-                      sm:ml-12 
-                      sm:mt-[20rem] 
-                      pl-[4rem] 
-                      sm:pl-[0rem] 
-                      mt-[2rem] 
-                      sm:pt-[0rem] 
-                      static 
-                      sm:fixed 
-                      sm:pr-[50rem] 
-                      items-center'>
-        
-        {/* <img alt="Ikhsan N. Huda" src="/ns.png" priority className="mt-8 rounded-full w-[6rem] h-[6rem] sm:w-[8rem] sm:h-[8rem] object-cover" /> */}
-         <div>    
-          <div className='flex flex-col gap-1'> 
-        
-        <h1 className='text-8xl font-lato italic text-[#bababa] '>Ikhsan.</h1>             
-         <div className='flex gap-2 text-[#bababa]'> 
-          <h2 className='text-1xl font-catamaran text-[#bababa] '>
-            A Happy React User
-          </h2>
-          <IconGithub />
+        <div className='static xl:fixed xl:ml-[2rem] mt-[2rem] xl:mt-[26rem]'>
+
+          {/* <img alt="Ikhsan N. Huda" src="/ns.png" priority className="mt-8 rounded-full w-[6rem] h-[6rem] sm:w-[8rem] sm:h-[8rem] object-cover" /> */}
+
+          {/*==1==*/}
+          <div>
+            <h1 className='text-8xl font-lato italic text-[#bababa] text-center '>Ikhsan.</h1>
           </div>
-          </div>
-          <hr className='w-[10rem] h-[0.5rem] bg-[#bababa] mt-4' />
-          <div className='flex gap-6 mt-4 font-catamaran text-white'>
-            <div className='flex items-center gap-1'>
-             <Link href='/'> Resume  </Link> <IconPDF />
-            </div>
-            <div className='flex items-center gap-1'>
-             <Link href='/'> Schedule e-Meet  </Link> <IconMeet />
-            </div>
+          {/*==1==*/}
+
+          {/*==2==*/}
+          <div className='flex justify-center xl:justify-start mt-[0.5rem]'>
+            <div className='flex gap-2 text-[#bababa]'>
+              <h2 className='text-1xl font-catamaran text-[#bababa]'>
+                A Happy React User
+              </h2>
+              <IconGithub />
             </div>
           </div>
+          {/*==2==*/}
+
+          <div className="flex justify-center xl:justify-start mt-4">
+            <hr className="w-[17rem] xl:w-[10rem] h-[0.5rem] bg-gray-400" />
+          </div>
+
+          {/*===3==*/}
+          <div className='flex justify-center xl:justify-start mt-4 font-catamaran text-white'>
+            <div className='flex gap-6'>
+              <div className='flex items-center gap-1'>
+                <Link href='/'>Resume</Link> <IconPDF />
+              </div>
+              <div className='flex items-center gap-1'>
+                <Link href='/'>Schedule e-Meet</Link> <IconMeet />
+              </div>
+            </div>
+          </div>
+          {/*==3==*/}
+
+
         </div>
+
+
       </div>
-      <div>
+      {/*===== END =====*/}
+      <div className='mr-6'>
         <Carousel items={items} />
       </div>
+
     </>
+
+
   )
 }
 
