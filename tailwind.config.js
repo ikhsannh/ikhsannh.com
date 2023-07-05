@@ -13,6 +13,7 @@ module.exports = {
         colors: {
           darkGreen: "#08161A",
           cream : "#F5F5F5",
+          gray: "#bababa" 
       },
         fontFamily: {
           Catamaran: ['Catamaran', 'sans-serif'],

@@ -31,11 +31,11 @@ const PostPage: React.FC<PostPageProps> = ({ frontMatter: { title, date }, mdxSo
           </div> */}
           <div className="flex flex-col ml-4">
             <h3 className="text-lg font-semibold text-white leading-3">{title}</h3>
-            <p className="text-gray-400 text-center sm:text-left text-sm">{date}</p>
+            <p className="text-white text-center sm:text-left text-sm">{date}</p>
           </div>
         </div>
       </div>
-      <div className="text-white flex justify-center px-8">
+      <div className="text-gray flex justify-center px-8">
         <div className="text-left">
           <div className="inline-block">
             <MDXRemote {...mdxSource} components={components} />

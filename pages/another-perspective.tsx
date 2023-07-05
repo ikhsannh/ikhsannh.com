@@ -16,7 +16,7 @@ interface masteringNextjsProps {
 
 const MasteringNextjs: React.FC<masteringNextjsProps> = ({ posts }) => {
   return (
-    <div className='container mx-auto xl:px-[2rem] md:px-[0rem] sm:px-[1rem] px-[1rem]'>
+    <div className='container mx-auto xl:px-[2rem] md:px-[0rem] sm:px-[1rem] px-[1rem] text-gray'>
     {posts.map((post, index) => (
       <Link href={'/writing/ap/' + post.slug} passHref key={index}>
         <div className="flex flex-row items-center justify-between p-4 border-b-2 border-gray-200">
@@ -26,16 +26,16 @@ const MasteringNextjs: React.FC<masteringNextjsProps> = ({ posts }) => {
               <Image src="/react.png" className="w-full h-full object-cover" alt={'reactLogo'} width={100} height={100} />
             </div> */}
             <div className="flex flex-col ml-4">
-              <h3 className="text-lg font-semibold text-white">{post.frontMatter.title}</h3>
-              <p className="text-gray-500">{post.frontMatter.date}</p>
+              <h3 className="text-lg font-semibold">{post.frontMatter.title}</h3>
+              <p className="">{post.frontMatter.date}</p>
             </div>
           </div>
-          <div className="flex flex-row items-center mt-4 md:mt-0">
-            <p className="text-gray-300">Read more</p>
+          {/* <div className="flex flex-row items-center mt-4 md:mt-0">
+            <p className="">Read more</p>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" color='white'>
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-          </div>
+          </div> */}
         </div>
       </Link>
     ))}
