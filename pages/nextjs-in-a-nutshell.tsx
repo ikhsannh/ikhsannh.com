@@ -4,7 +4,7 @@ import matter, { GrayMatterFile } from 'gray-matter'
 import Link from 'next/link'
 import Image from 'next/image'
 
-interface masteringNextjsProps {
+interface NexjsInaNutshellProps {
   posts: {
     frontMatter: {
       title: string;
@@ -14,7 +14,7 @@ interface masteringNextjsProps {
   }[];
 }
 
-const MasteringNextjs: React.FC<masteringNextjsProps> = ({ posts }) => {
+const NexjsInaNutshell: React.FC<NexjsInaNutshellProps> = ({ posts }) => {
   return (
     <div className='container mx-auto xl:px-[2rem] md:px-[0rem] sm:px-[1rem] px-[1rem]'>
     {posts.map((post, index) => (
@@ -63,7 +63,7 @@ export const getStaticProps = async () => {
   }
 }
 
-export default MasteringNextjs;
+export default NexjsInaNutshell;
 
 
 
