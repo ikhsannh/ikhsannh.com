@@ -50,7 +50,7 @@ const LeftComponent = () => {
           {/*==2==*/}
 
           <div className="flex justify-center xl:justify-start mt-4">
-            <hr className="w-[17rem] xl:w-[10rem] h-[0.5rem] bg-gray-400" />
+            <hr className="w-[17rem] xl:w-[10rem] h-[0.5rem] bg-[#bababa] rounded-full" />
           </div>
 
           {/*===3==*/}
