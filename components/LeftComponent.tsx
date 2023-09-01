@@ -7,6 +7,13 @@ import Carousel from './Carousel'
 import IconGithub from './Icon/IconGithub'
 
 const items = [
+   {
+    title: 'Locom AI',
+    feedback: '"Excellent, and technical developer. Thanks will continue to work with."',
+    client: 'Tom Curry',
+    clientTitle: 'Manager',
+    url: 'https://locom.ai/',
+  },
   {
     title: 'Dev Team',
     feedback: '"Hello Ikhsan! Thanks for your contribution. It`s a pleasure to work with you."',
