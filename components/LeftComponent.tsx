@@ -11,7 +11,7 @@ const items = [
     title: 'Locom AI',
     feedback: '"Excellent, and technical developer. Thanks will continue to work with."',
     client: 'Tom Curry',
-    clientTitle: 'Manager',
+    clientTitle: 'Manager Locom AI',
     url: 'https://locom.ai/',
   },
   {
@@ -80,7 +80,8 @@ const LeftComponent = () => {
       </div>
       {/*===== END =====*/}
       <div className='mr-6'>
-        <Carousel items={items} />
+        {/* want to display Items number 2 */}
+        <Carousel items={items} />       
       </div>
 
     </>
