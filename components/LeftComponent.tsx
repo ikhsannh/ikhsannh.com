@@ -8,10 +8,10 @@ import IconGithub from './Icon/IconGithub'
 
 const items = [
    {
-    title: 'Locom AI',
+    title: 'Locom Artificial Intelligence',
     feedback: '"Excellent, and technical developer. Thanks will continue to work with."',
     client: 'Tom Curry',
-    clientTitle: 'Manager Locom AI',
+    clientTitle: 'Manager Locom Artificial Intelligence',
     url: 'https://locom.ai/',
   },
   {
