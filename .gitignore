@@ -37,3 +37,8 @@ next-env.d.ts
 # PWA
 sw.js
 workbox-*
+
+# Ubuntu
+KeyAN.pem
+ecosystem.config.js
+```
