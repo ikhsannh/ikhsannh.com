@@ -6,13 +6,6 @@ import Carousel from './Carousel'
 import IconGithub from './Icon/IconGithub'
 
 const items = [
-   {
-    title: 'Locom Artificial Intelligence',
-    feedback: '"Excellent, and technical developer. Thanks will continue to work with."',
-    client: 'Tom Curry',
-    clientTitle: 'Manager Locom Artificial Intelligence',
-    url: 'https://locom.ai/',
-  },
   {
     title: 'Dev Team',
     feedback: '"Hello Ikhsan! Thanks for your contribution. It`s a pleasure to work with you."',
@@ -26,6 +19,13 @@ const items = [
     client: 'Aaron S.',
     clientTitle: 'Founder & CEO Trigan',
     url: 'https://trigan.org/',
+  },
+  {
+    title: 'Locom Artificial Intelligence',
+    feedback: '"Excellent, and technical developer. Thanks will continue to work with."',
+    client: 'Tom Curry',
+    clientTitle: 'Manager Locom Artificial Intelligence',
+    url: 'https://locom.ai/',
   },
 ];
 
