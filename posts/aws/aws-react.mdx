@@ -1,0 +1,85 @@
+---
+title: 'Aws React'
+date: 'Sept 09, 2023'
+description: 'Creating a React app on AWS'
+thumbnailUrl: '/javascript-functions-thumbnail.jpeg'
+tags: ['aws', 'ubuntu', 'react']
+---
+<br />
+<div className="flex-col items-center">
+  <h1 className="text-2xl" style={{color: '#61dafb'}}>On this page</h1>
+
+1.   Create new react project 
+2.  <a href="#peluncuran-ec2-instance-di-aws">Launch EC2 Instance in AWS</a>
+3.  <a href="#konfigurasi-proyek-react-untuk-aws">Configure React project for AWS</a>
+4.  <a href="#git-commit-dan-push-ke-private-repo-github">Git Commit and Push to Private Repo GitHub</a>
+5.  <a href="#koneksi-ke-instance-aws-melalui-ssh">Connect to Instance AWS use SSH</a>
+6.  <a href="#persiapan-lingkungan-aws-ubuntu">Prepare Envriontment AWS Ubuntu</a>
+7.  <a href="#konfigurasi-keamanan">Configure Access</a>
+8.  <a href="#instalasi-nginx-dan-pm2">Install Nginx and PM2</a>
+9.  <a href="#konfigurasi-nginx-untuk-hosting-proyek">Nginx configuration for Project</a>
+10. <a href="#pengecekan-di-domain">Go-to default number domain from AWS</a>
+</div>
+<br />
+---
+<br />
+## # Create new react project
+<br />
+<SyntaxHighlighter language="javascript" className="rounded-lg w-[50%]">
+  {`
+    npx create-react-app [project-name]
+  `}
+</SyntaxHighlighter>
+<br />
+
+## Launch EC2 Instance in AWS from template
+
+Menggunakan template yang telah dibuat sebelumnya.
+![TemplateInstance](https://github.com/ikhsannh/ikhsannh.com/blob/main/public/aws/aws-react/TemplateInstance.jpeg)
+
+Menambahkan Key-Pair baru saat peluncuran instance.
+![KeyPair](https://github.com/ikhsannh/ikhsannh.com/blob/main/public/aws/aws-react/NewPair.jpeg)
+
+Meluncurkan instance.
+![LaunchInstance](https://github.com/ikhsannh/ikhsannh.com/blob/main/public/aws/aws-react/LaunchInstance.jpeg)
+
+## Konfigurasi Proyek React untuk AWS
+
+Membuat ekosistem PM2 untuk proyek React.
+Mengatur kunci-pasangan yang sudah diluncurkan.
+
+## Git Commit dan Push ke Private Repo GitHub
+
+Mengcommit dan mendorong perubahan proyek React ke repo GitHub pribadi.
+
+## Koneksi ke Instance AWS melalui SSH
+
+Menghubungkan ke instance AWS menggunakan SSH.
+Membuka terminal Ubuntu pada instance.
+Menjadi pengguna root dengan perintah "sudo su".
+Memperbarui paket Ubuntu dengan "sudo apt update".
+
+## Persiapan Lingkungan AWS Ubuntu
+
+Memeriksa apakah Node.js sudah terinstal, jika tidak, menginstal NVM.
+Memeriksa apakah Git sudah terinstal, jika tidak, menginstal Git.
+Mengatasi masalah izin SSH dengan menghasilkan dan menambahkan SSH key.
+Mengklon repo GitHub proyek React ke dalam instance.
+
+## Konfigurasi Keamanan
+
+Mengatur izin akses kunci-pasangan agar hanya dapat diakses oleh pemilik dengan "chmod 400 key.pem".
+
+## Instalasi Nginx dan PM2
+
+Menginstal Nginx sebagai server web.
+Menginstal PM2 untuk mengelola aplikasi React.
+
+## Konfigurasi Nginx untuk Hosting Proyek
+
+Mengonfigurasi Nginx agar dapat meng-host proyek React di server.
+Melakukan restart Nginx untuk menerapkan konfigurasi.
+
+## Pengecekan di Domain
+
+Memeriksa proyek React yang di-hosting di domain yang sesuai.
