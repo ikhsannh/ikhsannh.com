@@ -6,80 +6,330 @@ thumbnailUrl: '/javascript-functions-thumbnail.jpeg'
 tags: ['aws', 'ubuntu', 'react']
 ---
 <br />
-<div className="flex-col items-center">
-  <h1 className="text-2xl" style={{color: '#61dafb'}}>On this page</h1>
-
-1.   Create new react project 
-2.  <a href="#peluncuran-ec2-instance-di-aws">Launch EC2 Instance in AWS</a>
-3.  <a href="#konfigurasi-proyek-react-untuk-aws">Configure React project for AWS</a>
-4.  <a href="#git-commit-dan-push-ke-private-repo-github">Git Commit and Push to Private Repo GitHub</a>
-5.  <a href="#koneksi-ke-instance-aws-melalui-ssh">Connect to Instance AWS use SSH</a>
-6.  <a href="#persiapan-lingkungan-aws-ubuntu">Prepare Envriontment AWS Ubuntu</a>
-7.  <a href="#konfigurasi-keamanan">Configure Access</a>
-8.  <a href="#instalasi-nginx-dan-pm2">Install Nginx and PM2</a>
-9.  <a href="#konfigurasi-nginx-untuk-hosting-proyek">Nginx configuration for Project</a>
-10. <a href="#pengecekan-di-domain">Go-to default number domain from AWS</a>
+<div className="flex-col text-center">
+  <h1 className="text-2xl py-10" style={{color: '#61dafb'}}>On this page</h1>
+<br />
+1.  <a> Create new react project </a> 
+2.  <a >Launch EC2 Instance in AWS</a>
+3.  <a >Configure React project for AWS</a>
+4.  <a >Git Commit and Push to Private Repo GitHub</a>
+5.  <a >Connect to Instance AWS use SSH</a>
+6.  <a >Prepare Envriontment AWS Ubuntu</a>
+7.  <a >Configure Access</a>
+8.  <a >Install Nginx and PM2</a>
+9.  <a >Nginx configuration for Project</a>
+10. <a >Go-to default number domain from AWS</a>
 </div>
+
 <br />
 ---
 <br />
-## # Create new react project
+
+
+## <div style={{fontSize: '1.5rem', fontWeight: 'bold'}}>  # Create new react project </div>
+
 <br />
-<SyntaxHighlighter language="javascript" className="rounded-lg w-[50%]">
+<SyntaxHighlighter language="jsx" className="rounded-lg w-[50%]" >
   {`
     npx create-react-app [project-name]
   `}
 </SyntaxHighlighter>
 <br />
 
-## Launch EC2 Instance in AWS from template
+ ## <div style={{fontSize: '1.5rem', fontWeight: 'bold'}}> # Launch EC2 Instance in AWS from template </div>
+<br />
 
 Menggunakan template yang telah dibuat sebelumnya.
-![TemplateInstance](https://github.com/ikhsannh/ikhsannh.com/blob/main/public/aws/aws-react/TemplateInstance.jpeg)
+<br />
+![TemplateInstance](https://raw.githubusercontent.com/ikhsannh/ikhsannh.com/main/public/aws/aws-react/TemplateInstance.jpeg)
+<br />
+Menambahkan Key-Pair baru saat launch instance.
+<br />
+![KeyPair](https://raw.githubusercontent.com/ikhsannh/ikhsannh.com/main/public/aws/aws-react/NewPair.jpeg)
+<br />
+Launch instance.
+<br />
+![LaunchInstance](https://raw.githubusercontent.com/ikhsannh/ikhsannh.com/main/public/aws/aws-react/LaunchInstance.jpeg)
 
-Menambahkan Key-Pair baru saat peluncuran instance.
-![KeyPair](https://github.com/ikhsannh/ikhsannh.com/blob/main/public/aws/aws-react/NewPair.jpeg)
+## <div style={{fontSize: '1.5rem', fontWeight: 'bold'}}> # Konfigurasi Proyek React dengan AWS </div> 
+<br />
 
-Meluncurkan instance.
-![LaunchInstance](https://github.com/ikhsannh/ikhsannh.com/blob/main/public/aws/aws-react/LaunchInstance.jpeg)
+Genereate ekosistem PM2 untuk proyek React.
 
-## Konfigurasi Proyek React untuk AWS
+<br />
+<SyntaxHighlighter language="jsx" className="rounded-lg w-[50%]">
+  {`
+    pm2 ecosystem
+  `}
+</SyntaxHighlighter>
+<br />
 
-Membuat ekosistem PM2 untuk proyek React.
-Mengatur kunci-pasangan yang sudah diluncurkan.
+Ini akan membuat file ecosystem.config.js yang berisi konfigurasi untuk PM2.
+<br />
+<SyntaxHighlighter language="jsx" className="rounded-lg w-[50%]">
+  {`
+    module.exports = {
+  apps : [{
+    script: 'index.js',
+    watch: '.'
+  }, {
+    script: './service-worker/',
+    watch: ['./service-worker']
+  }],
 
-## Git Commit dan Push ke Private Repo GitHub
+  deploy : {
+    production : {
+      user : 'SSH_USERNAME',
+      host : 'SSH_HOSTMACHINE',
+      ref  : 'origin/master',
+      repo : 'GIT_REPOSITORY',
+      path : 'DESTINATION_PATH',
+      'pre-deploy-local': '',
+      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
+      'pre-setup': ''
+    }
+  }
+};
 
-Mengcommit dan mendorong perubahan proyek React ke repo GitHub pribadi.
+  `}
+</SyntaxHighlighter>
+<br />
 
-## Koneksi ke Instance AWS melalui SSH
+Setup ekosistem PM2 agar dapat menjalankan aplikasi React.
+<br />
+<SyntaxHighlighter language="jsx" className="rounded-lg w-[50%]">
+  {`
+    module.exports = {
+  apps : [{
+    script: 'npm run start',
+  }],
 
-Menghubungkan ke instance AWS menggunakan SSH.
+  deploy : {
+    production : {
+      key : 'ReactKey.pem',
+      user : 'ubuntu',
+      host : '18.206.190.104',
+      ref  : 'origin/main',
+      repo : 'git@github.com:ikhsannh/NS-ReactAWS.git',
+      path : 'home/ubuntu/NS-ReactAWS',
+      'pre-deploy-local': '',
+      'post-deploy' : 'source ~/.bashrc && npm install && npm run build && pm2 reload ecosystem.config.js --env production',
+      'pre-setup': '',
+      'ssh_options': 'ForwardAgent=yes',
+    }
+  }
+};
+  `}
+</SyntaxHighlighter>
+<br />
+
+
+Genereate key-pair yang sudah diluncurkan.
+<br />
+<SyntaxHighlighter language="jsx" className="rounded-lg w-[50%]">
+  {`
+    cp ~/Downloads/aws-key.[key-pair].pem .
+  `}
+</SyntaxHighlighter>
+<br />
+
+## <div style={{fontSize: '1.5rem', fontWeight: 'bold'}}> # Git Commit dan Push ke Private Repo GitHub </div>
+<br />
+
+Commit dan push perubahan proyek React ke repo GitHub pribadi.
+
+<br />
+<SyntaxHighlighter language="jsx" className="rounded-lg w-[50%]">
+  {`
+    git add .
+    git commit -m "message"
+    git push
+  `}
+</SyntaxHighlighter>
+<br />
+
+## <div style={{fontSize: '1.5rem', fontWeight: 'bold'}}> # Koneksi ke Instance AWS melalui SSH </div>
+<br />
+
+Connect ke instance AWS menggunakan SSH.
+<br />
+![SSHConnect](https://raw.githubusercontent.com/ikhsannh/ikhsannh.com/main/public/aws/aws-react/SSHConnect.jpeg)
+<br />
+
 Membuka terminal Ubuntu pada instance.
-Menjadi pengguna root dengan perintah "sudo su".
-Memperbarui paket Ubuntu dengan "sudo apt update".
 
-## Persiapan Lingkungan AWS Ubuntu
+Change directory to root using:
+<br />
+<SyntaxHighlighter language="jsx" className="rounded-lg w-[50%]">
+  {`
+    sudo su
+  `}
+</SyntaxHighlighter>
+<br />
+Update ubuntu dengan perintah: 
+<br />
+<SyntaxHighlighter language="jsx" className="rounded-lg w-[50%]">
+  {`
+    sudo apt update
+  `}
+</SyntaxHighlighter>
+<br />
 
-Memeriksa apakah Node.js sudah terinstal, jika tidak, menginstal NVM.
-Memeriksa apakah Git sudah terinstal, jika tidak, menginstal Git.
-Mengatasi masalah izin SSH dengan menghasilkan dan menambahkan SSH key.
-Mengklon repo GitHub proyek React ke dalam instance.
+## <div style={{fontSize: '1.5rem', fontWeight: 'bold'}}> # Persiapan Lingkungan AWS Ubuntu </div>
+<br />
 
-## Konfigurasi Keamanan
+Memeriksa apakah Node.js sudah terinstal, 
+<br />
+<SyntaxHighlighter language="jsx" className="rounded-lg w-[50%]">
+  {`
+    node -v
+  `}
+</SyntaxHighlighter>
+<br />
 
-Mengatur izin akses kunci-pasangan agar hanya dapat diakses oleh pemilik dengan "chmod 400 key.pem".
+jika belum, install NVM menggunakan Curl.
+<br />
+<SyntaxHighlighter language="jsx" className="rounded-lg w-[50%]">
+  {`
+    go-to link 
+    https://github.com/nvm-sh/nvm 
+    to get the latest version
+  `}
+</SyntaxHighlighter>
+<br />
 
-## Instalasi Nginx dan PM2
+Aktifkan NVM dengan perintah:
+<br />
+<SyntaxHighlighter language="jsx" className="rounded-lg w-[50%]">
+  {`
+    source ~/.bashrc
+  `}
+</SyntaxHighlighter>
+<br />
 
-Menginstal Nginx sebagai server web.
-Menginstal PM2 untuk mengelola aplikasi React.
+Memeriksa apakah Git sudah terinstal,
+<br />
+<SyntaxHighlighter language="jsx" className="rounded-lg w-[50%]">
+  {`
+    git --version
+  `}
+</SyntaxHighlighter>
+<br />
+jika belum, install Git.
+<br />
+<SyntaxHighlighter language="jsx" className="rounded-lg w-[50%]">
+  {`
+    sudo apt install git
+  `}
+</SyntaxHighlighter>
+<br />
 
-## Konfigurasi Nginx untuk Hosting Proyek
+Jika ada masalah public-key, generate RSA key-pair.
+<br />
+<SyntaxHighlighter language="jsx" className="rounded-lg w-[50%]">
+  {`
+    ssh-keygen -t rsa -b 4096 -C "youremail.gmail.com"
+    then
+    cat ~/.ssh/id_rsa.pub
+  `}
+</SyntaxHighlighter>
+<br />
+Lalu copy hasil dari cat-public ke SSH github setting.
+<br />
+![AddSSHkeyGithub](https://raw.githubusercontent.com/ikhsannh/ikhsannh.com/main/public/aws/aws-react/AddSSHkeyGithub.jpeg)
+<br />
+Clone repo GitHub proyek React ke dalam instance.
+<br />
+<SyntaxHighlighter language="jsx" className="rounded-lg w-[50%]">
+  {`
+    git clone [repo-url]
+  `}
+</SyntaxHighlighter>
+<br />
 
-Mengonfigurasi Nginx agar dapat meng-host proyek React di server.
+## <div style={{fontSize: '1.5rem', fontWeight: 'bold'}}> # Konfigurasi Keamanan </div>
+<br />
+
+Mengatur izin akses key-pair agar hanya dapat diakses oleh pemilik dengan:
+<br />
+<SyntaxHighlighter language="jsx" className="rounded-lg w-[50%]">
+  {`
+    chmod 400 [key-pair].pem
+  `}
+</SyntaxHighlighter>
+<br />
+
+## <div style={{fontSize: '1.5rem', fontWeight: 'bold'}}> # Instalasi Nginx dan PM2 </div>
+<br />
+
+Install Nginx sebagai server web.
+<br />
+<SyntaxHighlighter language="jsx" className="rounded-lg w-[50%]">
+  {`
+    sudo apt install nginx
+  `}
+</SyntaxHighlighter>
+<br />
+Install PM2 untuk mengelola aplikasi React dan running forever.
+<br />
+<SyntaxHighlighter language="jsx" className="rounded-lg w-[50%]">
+  {`
+    sudo npm install pm2 -g
+  `}
+</SyntaxHighlighter>
+<br />
+
+
+## <div style={{fontSize: '1.5rem', fontWeight: 'bold'}}>  # Konfigurasi Nginx untuk Hosting Proyek </div>
+<br />
+
+Konfigurasi Nginx agar dapat meng-host proyek React di server.
+<br />
+<SyntaxHighlighter language="jsx" className="rounded-lg w-[50%]">
+  {`
+    sudo nano /etc/nginx/sites-available/default
+  `}
+</SyntaxHighlighter>
+<br />
+
+Bisa dengan menambahkan file konfigurasi baru.
+<br />
+<SyntaxHighlighter language="jsx" className="rounded-lg w-[50%]">
+  {`
+    sudo nano /etc/nginx/sites-available/your-app-name.conf
+  `}
+</SyntaxHighlighter>
+<br />
+
+Setup konfigurasi Nginx untuk proyek React.
+<br />
+<SyntaxHighlighter language="jsx" className="rounded-lg w-[50%]">
+  {`
+    server {
+      listen 80;
+      server_name your-IPPublicdomain.com;
+
+      location / {
+        proxy_pass http://localhost:3000;
+      }
+    }
+  `}
+</SyntaxHighlighter>
+<br />
+
 Melakukan restart Nginx untuk menerapkan konfigurasi.
+<br />
+<SyntaxHighlighter language="jsx" className="rounded-lg w-[50%]">
+  {`
+    sudo systemctl restart nginx
+  `}
+</SyntaxHighlighter>
+<br />
 
-## Pengecekan di Domain
+## <div style={{fontSize: '1.5rem', fontWeight: 'bold'}}>  # Pengecekan di Domain </div>
+<br />
 
-Memeriksa proyek React yang di-hosting di domain yang sesuai.
+Memeriksa proyek React yang di-hosting di domain yang sesuai. 
+<br />
+![PublicIP-AWS](https://raw.githubusercontent.com/ikhsannh/ikhsannh.com/main/public/aws/aws-react/PublicIP-AWS.jpeg)
+<br />
