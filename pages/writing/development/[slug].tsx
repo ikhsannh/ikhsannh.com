@@ -47,7 +47,7 @@ const PostPage: React.FC<PostPageProps> = ({ frontMatter: { title, date }, mdxSo
 };
 
 export const getStaticPaths = async () => {
-  const files = fs.readdirSync(path.join('posts/nextjs'));
+  const files = fs.readdirSync(path.join('posts/development'));
 
   const paths = files.map((filename) => ({
     params: {
@@ -62,7 +62,7 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params: { slug } }: { params: { slug: string } }) => {
-  const markdownWithMeta = fs.readFileSync(path.join('posts/nextjs', slug + '.mdx'), 'utf-8');
+  const markdownWithMeta = fs.readFileSync(path.join('posts/development', slug + '.mdx'), 'utf-8');
 
   const { data: frontMatter, content } = matter(markdownWithMeta);
   const mdxSource = await serialize(content);

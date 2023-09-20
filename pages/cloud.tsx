@@ -4,7 +4,7 @@ import matter from 'gray-matter'
 import Link from 'next/link'
 import Image from 'next/image'
 
-interface masteringTypescriptProps {
+interface AWSProps {
   posts: {
     frontMatter: {
       title: string;
@@ -14,11 +14,11 @@ interface masteringTypescriptProps {
   }[];
 }
 
-const masteringTypescript: React.FC<masteringTypescriptProps> = ({ posts }) => {
+const AWS: React.FC<AWSProps> = ({ posts }) => {
   return (
     <div className='container mx-auto xl:px-[2rem] md:px-[0rem] sm:px-[1rem] px-[1rem]'>
       {posts.map((post, index) => (
-        <Link href={'/writing/typescript/' + post.slug} passHref key={index}>
+        <Link href={'/writing/cloud/' + post.slug} passHref key={index}>
           <div className="flex flex-row items-center justify-between p-4 border-b-2 border-gray-200">
 
             <div className="flex flex-row items-center">
@@ -27,11 +27,11 @@ const masteringTypescript: React.FC<masteringTypescriptProps> = ({ posts }) => {
               </div>
               <div className="flex flex-col ml-4">
                 <h3 className="text-lg font-semibold text-white">{post.frontMatter.title}</h3>
-                <p className="text-gray-500">{post.frontMatter.date}</p>
+                <p className="text-gray">{post.frontMatter.date}</p>
               </div>
             </div>
             <div className="flex flex-row items-center mt-4 md:mt-0">
-              <p className="text-gray-300">Read more</p>
+              <p className="text-gray">Read more</p>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" color='white'>
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -44,10 +44,10 @@ const masteringTypescript: React.FC<masteringTypescriptProps> = ({ posts }) => {
 }
 
 export const getStaticProps = async () => {
-  const files = fs.readdirSync(path.join('posts/tsc'))
+  const files = fs.readdirSync(path.join('posts/cloud'))
 
   const posts = files.map(filename => {
-    const markdownWithMeta = fs.readFileSync(path.join('posts/tsc', filename), 'utf-8')
+    const markdownWithMeta = fs.readFileSync(path.join('posts/cloud', filename), 'utf-8')
     const { data: frontMatter } = matter(markdownWithMeta)
 
     return {
@@ -63,4 +63,4 @@ export const getStaticProps = async () => {
   }
 }
 
-export default masteringTypescript;
+export default AWS;

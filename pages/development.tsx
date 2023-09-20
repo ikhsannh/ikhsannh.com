@@ -18,7 +18,7 @@ const AWS: React.FC<AWSProps> = ({ posts }) => {
   return (
     <div className='container mx-auto xl:px-[2rem] md:px-[0rem] sm:px-[1rem] px-[1rem]'>
       {posts.map((post, index) => (
-        <Link href={'/writing/aws/' + post.slug} passHref key={index}>
+        <Link href={'/writing/development/' + post.slug} passHref key={index}>
           <div className="flex flex-row items-center justify-between p-4 border-b-2 border-gray-200">
 
             <div className="flex flex-row items-center">
@@ -27,11 +27,11 @@ const AWS: React.FC<AWSProps> = ({ posts }) => {
               </div>
               <div className="flex flex-col ml-4">
                 <h3 className="text-lg font-semibold text-white">{post.frontMatter.title}</h3>
-                <p className="text-gray-500">{post.frontMatter.date}</p>
+                <p className="text-gray">{post.frontMatter.date}</p>
               </div>
             </div>
             <div className="flex flex-row items-center mt-4 md:mt-0">
-              <p className="text-gray-300">Read more</p>
+              <p className="text-gray">Read more</p>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" color='white'>
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -44,10 +44,10 @@ const AWS: React.FC<AWSProps> = ({ posts }) => {
 }
 
 export const getStaticProps = async () => {
-  const files = fs.readdirSync(path.join('posts/aws'))
+  const files = fs.readdirSync(path.join('posts/development'))
 
   const posts = files.map(filename => {
-    const markdownWithMeta = fs.readFileSync(path.join('posts/aws', filename), 'utf-8')
+    const markdownWithMeta = fs.readFileSync(path.join('posts/development', filename), 'utf-8')
     const { data: frontMatter } = matter(markdownWithMeta)
 
     return {
