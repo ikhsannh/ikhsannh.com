@@ -7,15 +7,7 @@ const withPWA = require('next-pwa')({
 
 
 module.exports = withPWA({
-    // Following line is to let NextJS know about its domain on specific case:
-  // 1. Project page : assetPrefix should be your project name (production only)
-  // 2. User or Group page : assetPrefix should not be set, or just '/' (production only)
-  // assetPrefix: isProd ? '/' : '',
   trailingSlash: true,
-  // experimental: {
-  //   forceSwcTransforms: true,
-  // },
-  
   images: {
     formats: ['image/avif', 'image/webp'],
     unoptimized: true,
