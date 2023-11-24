@@ -52,7 +52,7 @@ const RightComponent = () => {
                     <div className="">
                         <Image className="px-2 h-[8.5rem] w-[40rem] rounded-md" src="/pl.png" alt="Ecommerce" width={500} height={500} />
                         <div className="px-6 py-4">
-                            <div className="font-bold text-lg mb-2">E-Commerce </div>
+                            <div className="font-bold text-lg mb-2">Commerce </div>
                             <p className="text-gray-700 text-sm">
                                 Can post product, set price and manage orders as a Maintainer.
                             </p>
@@ -101,7 +101,7 @@ const RightComponent = () => {
                         </div>
                         <hr className='w-full h-[0.2rem] bg-[#bababa]' />
                         <div className="px-6 pt-2">
-                            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-[12px] font-semibold text-gray-700 mr-2">#Nextjs</span>
+                            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-[12px] font-semibold text-gray-700 mr-2">#React.js</span>
                             <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-[12px] font-semibold text-gray-700 mr-2">#Jitsi</span>
 
                             {/* <div className='flex float-right items-center mr-[-2rem]'>
