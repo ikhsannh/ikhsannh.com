@@ -8,11 +8,11 @@ const RightComponent = () => {
                 <div className='bg-white w-[22rem] sm:w-[25rem] lg:w-[40rem] h-[21.5rem] sm:h-[21.2rem] md:h-[21.2rem] lg:h-[19.2rem]  rounded-md mb-20'>
                     <hr className='w-[10rem] h-[0.5rem] bg-[#bababa]' />
                     <div className="">
-                        <Image className="px-2 h-[8.5rem] w-[40rem] object-contain" src="/ticketing.png" alt="ticket" width={500} height={500} />
+                        <Image className="px-2 h-[8.5rem] w-[40rem] object-contain" src="/task-tracker.png" alt="ticket" width={500} height={500} />
                         <div className="px-6 py-4">
-                            <div className="font-bold text-lg mb-2">Ticketing System</div>
+                            <div className="font-bold text-lg mb-2">Board Task Tracker</div>
                             <p className="text-gray-700 text-sm">
-                                A web application that allows to Create, Assign and Manage tickets.
+                                A board web application that allows to Create, Assign and Manage tasks.
                             </p>
                         </div>
                         <hr className='w-full h-[0.2rem] bg-[#bababa]' />
