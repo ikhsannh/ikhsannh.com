@@ -7,7 +7,8 @@ const withPWA = require('next-pwa')({
 
 
 module.exports = withPWA({
-  trailingSlash: true,
+  trailingSlash: false,
+	skipTrailingSlashRedirect: true,
   images: {
     formats: ['image/avif', 'image/webp'],
     unoptimized: true,
