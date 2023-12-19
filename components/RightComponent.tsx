@@ -47,7 +47,7 @@ const RightComponent = () => {
                     </div>
                 </div>
 
-                <div className='bg-white w-[22rem] sm:w-[25rem] lg:w-[40rem] h-[22.5rem] sm:h-[21.5rem] md:h-[21.5rem] lg:h-[19.2rem]  rounded-md mb-20'>
+                {/* <div className='bg-white w-[22rem] sm:w-[25rem] lg:w-[40rem] h-[22.5rem] sm:h-[21.5rem] md:h-[21.5rem] lg:h-[19.2rem]  rounded-md mb-20'>
                     <hr className='w-[10rem] h-[0.5rem]  bg-[#bababa] float-right' />
                     <div className="">
                         <Image className="px-2 h-[8.5rem] w-[40rem] rounded-md" src="/pl.png" alt="Ecommerce" width={500} height={500} />
@@ -87,7 +87,7 @@ const RightComponent = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 <div className='bg-white w-[22rem] sm:w-[25rem] lg:w-[40rem] h-[17.5rem] sm:h-[18.5rem] rounded-md mb-20'>
                     <hr className='w-[10rem] h-[0.5rem] bg-[#bababa] float-left' />
