@@ -47,14 +47,14 @@ const RightComponent = () => {
                     </div>
                 </div>
 
-                {/* <div className='bg-white w-[22rem] sm:w-[25rem] lg:w-[40rem] h-[22.5rem] sm:h-[21.5rem] md:h-[21.5rem] lg:h-[19.2rem]  rounded-md mb-20'>
+                <div className='bg-white w-[22rem] sm:w-[25rem] lg:w-[40rem] h-[22.5rem] sm:h-[21.5rem] md:h-[21.5rem] lg:h-[19.2rem]  rounded-md mb-20'>
                     <hr className='w-[10rem] h-[0.5rem]  bg-[#bababa] float-right' />
                     <div className="">
                         <Image className="px-2 h-[8.5rem] w-[40rem] rounded-md" src="/pl.png" alt="Ecommerce" width={500} height={500} />
                         <div className="px-6 py-4">
-                            <div className="font-bold text-lg mb-2">Commerce </div>
+                            <div className="font-bold text-lg mb-2">RenewXperience Store</div>
                             <p className="text-gray-700 text-sm">
-                                Can post product, set price and manage orders as a Maintainer.
+                                Can post product, set service, price and manage orders as a Maintainer.
                             </p>
                         </div>
                         <hr className='w-full h-[0.2rem] bg-[#bababa]' />
@@ -87,7 +87,7 @@ const RightComponent = () => {
                             </div>
                         </div>
                     </div>
-                </div> */}
+                </div>
 
                 <div className='bg-white w-[22rem] sm:w-[25rem] lg:w-[40rem] h-[17.5rem] sm:h-[18.5rem] rounded-md mb-20'>
                     <hr className='w-[10rem] h-[0.5rem] bg-[#bababa] float-left' />
