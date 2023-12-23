@@ -52,7 +52,7 @@ const RightComponent = () => {
                     <div className="">
                         <Image className="px-2 h-[8.5rem] w-[40rem] rounded-md" src="/pl.png" alt="Ecommerce" width={500} height={500} />
                         <div className="px-6 py-4">
-                            <div className="font-bold text-lg mb-2">RenewXperience Store</div>
+                            <div className="font-bold text-lg mb-2">Product as a Service</div>
                             <p className="text-gray-700 text-sm">
                                 Can post product, set service, price and manage orders as a Maintainer.
                             </p>
