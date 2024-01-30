@@ -25,7 +25,7 @@ const items = [
     feedback: '"Excellent, and technical developer. Thanks will continue to work with."',
     client: 'Tom Curry',
     clientTitle: 'Manager Locom AI',
-    url: 'https://locom.ai/',
+    url: '',
   },
 ];
 
