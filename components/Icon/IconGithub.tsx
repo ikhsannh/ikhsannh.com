@@ -4,8 +4,10 @@ const IconGithub = () => {
     return (
        <Link
             target='_blank' 
-            href='https://github.com/ikhsannh/'    
+            href='https://github.com/ikhsannh/'   
+            aria-label='Visit my GitHub profile' 
             > 
+            
         <svg
         width="20"
         height="20"

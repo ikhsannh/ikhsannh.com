@@ -27,7 +27,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
   return (
 
     <div className="flex justify-center items-center text-center xl:fixed mt-[2rem] xl:mt-[40rem]">
-      <button onClick={prevItem} className="bg-white rounded-full p-1 mr-[0.2rem] sm:mr-[1.4rem]">
+      <button onClick={prevItem} className="bg-white rounded-full p-1 mr-[0.2rem] sm:mr-[1.4rem]" aria-label='left button'>
         <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
         </svg>
@@ -47,7 +47,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
       </div>
       {/* End Card */}
 
-      <button onClick={nextItem} className="bg-white absolute rounded-full p-1 ml-[22.4rem] sm:ml-[29.5rem] xl:ml-[32.5rem]">
+      <button onClick={nextItem} className="bg-white absolute rounded-full p-1 ml-[22.4rem] sm:ml-[29.5rem] xl:ml-[32.5rem]"  aria-label='right button'>
         <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
