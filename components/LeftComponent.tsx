@@ -71,16 +71,12 @@ const LeftComponent = () => {
             </div>
           </div>
           {/*==3==*/}
-
-
         </div>
-
-
       </div>
       {/*===== END =====*/}
       <div className='mr-6'>
         {/* want to display Items number 2 */}
-        <Carousel items={items} />       
+        <Carousel items={items} />
       </div>
 
     </>

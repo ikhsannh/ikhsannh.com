@@ -12,21 +12,21 @@ module.exports = {
       extend: {
         colors: {
           darkGreen: "#08161A",
-          cream : "#F5F5F5",
-          gray: "#bababa" 
+          cream    : "#F5F5F5",
+          gray     : "#bababa" 
       },
         fontFamily: {
           Catamaran: ['Catamaran', 'sans-serif'],
-          Lato: ['Lato', 'sans-serif'],
+          Lato     : ['Lato', 'sans-serif'],
         },
         animation: {
-          bounce : 'bounce 1s 2s 3',
-          bounces: 'bounce 1s 5s 2',
+          bounce   : 'bounce 1s 2s 3',
+          bounces  : 'bounce 1s 5s 2',
       },
       keyframes: {
           bounce: {
               '0%, 100%': { transform: 'translateY(0)' },
-              '50%': { transform: 'translateY(-10px)' },
+              '50%'     : { transform: 'translateY(-10px)' },
           },
         },
       },
