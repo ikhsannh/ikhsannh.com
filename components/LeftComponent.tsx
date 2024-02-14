@@ -1,9 +1,8 @@
-import React from 'react'
-import Link from 'next/link'
-import IconPDF from './Icon/IconPDF'
-import IconMeet from './Icon/IconMeet'
-import Carousel from './Carousel'
-import IconGithub from './Icon/IconGithub'
+import Link from 'next/link';
+import IconPDF from './Icon/IconPDF';
+import IconMeet from './Icon/IconMeet';
+import Carousel from './Carousel';
+import IconGithub from './Icon/IconGithub';
 
 const items = [
   {
@@ -30,6 +29,7 @@ const items = [
 ];
 
 const LeftComponent = () => {
+
   return (
     <>
       {/*===== START =====*/}
@@ -40,15 +40,32 @@ const LeftComponent = () => {
 
           {/*==1==*/}
           <div>
-            <h1 className='text-8xl font-lato italic text-[#bababa] text-center '>Ikhsan.</h1>
+            <h1 className='text-9xl font-lato italic text-[#bababa] text-center '>Ikhsan.</h1>
           </div>
           {/*==1==*/}
 
           {/*==2==*/}
           <div className='flex justify-center xl:justify-start mt-[0.5rem]'>
             <div className='flex gap-2 text-[#bababa]'>
-              <h2 className='text-1xl font-catamaran text-[#bababa]'>
-                A Happy React User
+              <h2 className='text-2xl foont-thin font-catamaran text-[#bababa]'>
+                A
+              </h2>
+              <span className="h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.2xl)*theme(lineHeight.tight))] animate-delayed-slideUp overflow-hidden">
+                <ul className='block animate-slideUp pb-2 [&_li]:block'>
+                  <li className='mb-[0.4rem] text-2xl foont-thin text-center rounded'>
+                    JavaScript
+                  </li>
+                  <li className='mb-[0.4rem] text-2xl foont-thin text-center rounded'>
+                    Linux
+                  </li>
+                  <li className='mb-[0.4rem] text-2xl foont-thin text-center rounded'>
+                    Cloud
+                  </li>
+                  <li aria-hidden="true" className='text-2xl foont-thin text-center rounded'>JavaScript</li>
+                </ul>
+              </span>
+              <h2 className='text-2xl foont-thin font-catamaran text-[#bababa]'>
+                user
               </h2>
               <IconGithub />
             </div>
@@ -74,14 +91,11 @@ const LeftComponent = () => {
         </div>
       </div>
       {/*===== END =====*/}
-      <div className='mr-6'>
+      <div className='mr-6 xl:mt-10'>
         {/* want to display Items number 2 */}
         <Carousel items={items} />
       </div>
-
     </>
-
-
   )
 }
 

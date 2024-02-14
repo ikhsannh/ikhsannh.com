@@ -3,9 +3,10 @@ import Link from 'next/link';
 const IconGithub = () => {
     return (
        <Link
+            className="mt-[0.5rem] ml-[0.1rem]" 
             target='_blank' 
             href='https://github.com/ikhsannh/'   
-            aria-label='Visit my GitHub profile' 
+            title='visit GitHub profile' 
             > 
             
         <svg
