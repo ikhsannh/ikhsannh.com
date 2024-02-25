@@ -1,5 +1,5 @@
-import LeftComponent from "@/components/LeftComponent";
-import RightComponent from "@/components/RightComponent";
+import LeftComponent from "@/components/miniComponents/LeftComponent";
+import RightComponent from "@/components/miniComponents/RightComponent";
 
 export default function Home() {
   return (

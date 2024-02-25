@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import IconPDF from './Icon/IconPDF';
-import IconMeet from './Icon/IconMeet';
+import IconPDF from '../Icon/IconPDF';
+import IconMeet from '../Icon/IconMeet';
 import Carousel from './Carousel';
-import IconGithub from './Icon/IconGithub';
+import IconGithub from '../Icon/IconGithub';
 
 const items = [
   {
