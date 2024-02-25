@@ -5,8 +5,8 @@ import path from 'path';
 import matter from 'gray-matter';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 // import Image from 'next/image';
-import Navigation from '@/components/Navigation';
-import Button from '@/components/Button';
+import Navigation from '@/components/layout/Navigation';
+import Button from '@/components/miniComponents/Button';
 
 const components = { Navigation, Button, SyntaxHighlighter };
 
