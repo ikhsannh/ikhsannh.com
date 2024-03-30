@@ -118,8 +118,8 @@ const RightComponent = () => {
                         </div>
                         <hr className='w-full h-[0.2rem] bg-[#bababa]' />
                         <div className="px-6 pt-2">
-                            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-[12px] font-semibold text-gray-700 mr-2">#React.js</span>
-                            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-[12px] font-semibold text-gray-700 mr-2">#Jitsi</span>
+                            {/* <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-[12px] font-semibold text-gray-700 mr-2">#React.js</span>
+                            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-[12px] font-semibold text-gray-700 mr-2">#Jitsi</span> */}
 
                             {/* <div className='flex float-right items-center mr-[-2rem]'>
                             <Link
