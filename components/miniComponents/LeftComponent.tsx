@@ -48,24 +48,7 @@ const LeftComponent = () => {
           <div className='flex justify-center xl:justify-start mt-[0.5rem]'>
             <div className='flex gap-2 text-[#bababa]'>
               <h2 className='text-2xl foont-thin font-catamaran text-[#bababa]'>
-                A
-              </h2>
-              <span className="h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.2xl)*theme(lineHeight.tight))] animate-delayed-slideUp overflow-hidden">
-                <ul className='block animate-slideUp pb-2 [&_li]:block'>
-                  <li className='mb-[0.4rem] text-2xl foont-thin text-center rounded'>
-                    JavaScript
-                  </li>
-                  <li className='mb-[0.4rem] text-2xl foont-thin text-center rounded'>
-                    Linux
-                  </li>
-                  <li className='mb-[0.4rem] text-2xl foont-thin text-center rounded'>
-                    Cloud
-                  </li>
-                  <li aria-hidden="true" className='text-2xl foont-thin text-center rounded'>JavaScript</li>
-                </ul>
-              </span>
-              <h2 className='text-2xl foont-thin font-catamaran text-[#bababa]'>
-                user
+                A happy react user
               </h2>
               <IconGithub />
             </div>
