@@ -19,13 +19,13 @@ const items = [
     clientTitle: 'Founder & CEO Trigan',
     url: 'https://trigan.org/',
   },
-  {
-    title: 'Locom Artificial Intelligence',
-    feedback: '"Excellent, and technical developer. Thanks will continue to work with."',
-    client: 'Tom Curry',
-    clientTitle: 'Manager Locom AI',
-    url: '',
-  },
+  // {
+  //   title: 'Locom Artificial Intelligence',
+  //   feedback: '"Excellent, and technical developer. Thanks will continue to work with."',
+  //   client: 'Tom Curry',
+  //   clientTitle: 'Manager Locom AI',
+  //   url: '',
+  // },
 ];
 
 const LeftComponent = () => {
