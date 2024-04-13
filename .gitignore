@@ -41,4 +41,6 @@ workbox-*
 # Ubuntu
 KeyAN.pem
 ecosystem.config.js
+
+.idea
 ```
