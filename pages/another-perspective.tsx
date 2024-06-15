@@ -27,7 +27,7 @@ const MasteringNextjs: React.FC<masteringNextjsProps> = ({ posts }) => {
             </div> */}
             <div className="flex flex-col ml-4">
               <h3 className="text-lg font-semibold">{post.frontMatter.title}</h3>
-              <p className="">{post.frontMatter.date}</p>
+              {/* <p className="">{post.frontMatter.date}</p> */}
             </div>
           </div>
           {/* <div className="flex flex-row items-center mt-4 md:mt-0">

@@ -31,7 +31,7 @@ const PostPage: React.FC<PostPageProps> = ({ frontMatter: { title, date }, mdxSo
           </div> */}
           <div className="flex flex-col ml-4">
             <h3 className="text-lg font-semibold text-white leading-3">{title}</h3>
-            <p className="text-white text-center sm:text-left text-sm">{date}</p>
+            {/* <p className="text-white text-center sm:text-left text-sm">{date}</p> */}
           </div>
         </div>
       </div>

@@ -27,7 +27,7 @@ const AWS: React.FC<AWSProps> = ({ posts }) => {
               </div>
               <div className="flex flex-col ml-4">
                 <h3 className="text-lg font-semibold text-white">{post.frontMatter.title}</h3>
-                <p className="text-gray">{post.frontMatter.date}</p>
+                {/* <p className="text-gray">{post.frontMatter.date}</p> */}
               </div>
             </div>
             <div className="flex flex-row items-center mt-4 md:mt-0">
