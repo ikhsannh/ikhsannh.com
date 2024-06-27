@@ -48,7 +48,7 @@ const LeftComponent = () => {
           <div className='flex justify-center xl:justify-start mt-[0.5rem]'>
             <div className='flex gap-2 text-[#bababa]'>
               <h2 className='text-2xl foont-thin font-catamaran text-[#bababa]'>
-                Software Developer
+                Frontend Web Developer
               </h2>
               <IconGithub />
             </div>
